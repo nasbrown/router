@@ -1,0 +1,10 @@
+RewriteEngine On
+#Enables the runtime rewriting engine
+
+RewriteCond %{REQUEST_FILENAME} !-f
+#Specifies a condition that the requested filename is not an existing file
+RewriteCond %{REQUEST_FILENAME} !-d
+#Specifies a condition that the requested filename is not an existing directory
+
+RewriteRule ^ /router/index.php [QSA,L]
+#Redirects all requests(that do not match exisiting files or directories) to /router/index.php
