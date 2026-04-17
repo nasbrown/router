@@ -8,6 +8,6 @@ $heading = 'My Notes';
 
 $notes = [];
 
-$notes = $db->query("SELECT * FROM notes WHERE user_id = 2")->get();
+$notes = $db->query("SELECT * FROM notes WHERE user_id = 1")->get();
 
-require 'views/notes.view.php';
+require 'views/notes/index.view.php';
